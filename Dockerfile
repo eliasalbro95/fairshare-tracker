@@ -11,6 +11,6 @@ COPY . .
 # EXPOSE 8000
 EXPOSE $PORT
 # CMD ["gunicorn", "--bind", "0.0.0.0:8000", "core.wsgi:application"]
-CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "core.wsgi:application"]
+CMD ["gunicorn", "core.wsgi:application"]
 
 

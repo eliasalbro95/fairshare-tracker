@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-_jz^l$v)#y&190bo*2$*3*iq2$9o-xs%p&l)n*ec(!4n**-y4k"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["https://teoricoachen.se"]
+ALLOWED_HOSTS = ["https://teoricoachen.se", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -92,7 +92,7 @@ DATABASES = {
         "NAME": "fairsharetracker",
         "USER": "fairsharetracker",
         "PASSWORD": "1995",
-        "HOST": "localhost",
+        "HOST": "db",
         "PORT": "5432",
     }
 }

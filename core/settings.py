@@ -102,7 +102,7 @@ DATABASES = {
         "USER": "postgres",
         "PASSWORD": "4cc6F1a4BE*fDCAA3eDga*E4d6g-3131",
         "HOST": "monorail.proxy.rlwy.net",
-        "PORT": "5432",
+        "PORT": "57352",
     }
     # "default": {
     #     "ENGINE": "django.db.backends.postgresql",
@@ -165,7 +165,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "users.CustomUser"
 
 CORS_ALLOWED_ORIGINS = [
-    "*",
     # "https://example.com",
     # "https://sub.example.com",
     # "http://localhost:8080",

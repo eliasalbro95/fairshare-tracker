@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [
     # "*",
     "localhost",
     "127.0.0.1",
-    "https://fairshare-tracker.up.railway.app/",
+    "fairshare-tracker.up.railway.app",
 ]
 
 

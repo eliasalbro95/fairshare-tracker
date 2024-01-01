@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -94,6 +96,14 @@ WSGI_APPLICATION = "core.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "railway",
+        "USER": "postgres",
+        "PASSWORD": "4cc6F1a4BE*fDCAA3eDga*E4d6g-3131",
+        "HOST": "monorail.proxy.rlwy.net",
+        "PORT": "5432",
+    }
     # "default": {
     #     "ENGINE": "django.db.backends.postgresql",
     #     "NAME": "fairsharetracker",
@@ -102,10 +112,10 @@ DATABASES = {
     #     "HOST": "db",
     #     "PORT": "5432",
     # }
-    "default": dj_database_url.config(
-        # default="postgres://fairsharetracker:1995@db:5432/fairsharetracker" local DB
-        default="postgresql://postgres:4cc6F1a4BE*fDCAA3eDga*E4d6g-3131@monorail.proxy.rlwy.net:57352/railway"  # online
-    )
+    # "default": dj_database_url.config(
+    #     # default="postgres://fairsharetracker:1995@db:5432/fairsharetracker" local DB
+    #     default="postgresql://postgres:4cc6F1a4BE*fDCAA3eDga*E4d6g-3131@monorail.proxy.rlwy.net:57352/railway"  # online
+    # )
 }
 
 
@@ -146,7 +156,7 @@ USE_TZ = True
 # STATIC_URL = "static/"
 # STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "/static/"
-STATIC_ROOT = "static"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -155,6 +165,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "users.CustomUser"
 
 CORS_ALLOWED_ORIGINS = [
+    "*",
     # "https://example.com",
     # "https://sub.example.com",
     # "http://localhost:8080",

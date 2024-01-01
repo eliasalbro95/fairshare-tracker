@@ -104,7 +104,7 @@ DATABASES = {
     # }
     "default": dj_database_url.config(
         # default="postgres://fairsharetracker:1995@db:5432/fairsharetracker" local DB
-        default="postgresql://${{PGUSER}}:${{POSTGRES_PASSWORD}}@${{RAILWAY_TCP_PROXY_DOMAIN}}:${{RAILWAY_TCP_PROXY_PORT}}/${{PGDATABASE}}" # online
+        default="postgresql://postgres:4cc6F1a4BE*fDCAA3eDga*E4d6g-3131@monorail.proxy.rlwy.net:57352/railway"  # online
     )
 }
 

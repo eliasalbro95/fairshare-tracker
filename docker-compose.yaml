@@ -24,7 +24,7 @@ services:
     image: postgres
     environment:
       # Local DB
-      # POSTGRES_DB: PGDATABASE
+      # POSTGRES_DB: fairsharetracker
       # POSTGRES_USER: fairsharetracker
       # POSTGRES_PASSWORD: 1995
       #     Online DB

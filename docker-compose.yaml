@@ -23,6 +23,11 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_DB: fairsharetracker
-      POSTGRES_USER: fairsharetracker
-      POSTGRES_PASSWORD: 1995
+      # Local DB
+      # POSTGRES_DB: PGDATABASE
+      # POSTGRES_USER: fairsharetracker
+      # POSTGRES_PASSWORD: 1995
+      #     Online DB
+      POSTGRES_DB: railway
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 4cc6F1a4BE*fDCAA3eDga*E4d6g-3131

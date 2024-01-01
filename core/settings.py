@@ -98,9 +98,7 @@ DATABASES = {
     #     "PORT": "5432",
     # }
     "default": dj_database_url.config(
-        default=os.environ.get(
-            "postgres://fairsharetracker:1995@db:5432/fairsharetracker"
-        )
+        default="postgres://fairsharetracker:1995@db:5432/fairsharetracker"
     )
 }
 

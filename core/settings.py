@@ -168,7 +168,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "users.CustomUser"
 
 CORS_ALLOWED_ORIGINS = [
-    "https://fairshare-tracker.up.railway.app"
+    "https://fairshare-tracker.up.railway.app/",
+    "http://fairshare-tracker.up.railway.app/",
     # "https://example.com",
     # "https://sub.example.com",
     # "http://localhost:8080",

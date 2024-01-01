@@ -42,6 +42,6 @@ EXPOSE 8000
 ENTRYPOINT ["wrapper.sh"]
 
 # Run the default command (e.g., Gunicorn)
-CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "core.wsgi:application"]
+CMD ["gunicorn", "core.wsgi:application"]
 
 

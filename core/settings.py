@@ -34,8 +34,11 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "fairshare-tracker.up.railway.app",
 ]
-
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://fairshare-tracker.up.railway.app/",
+    "http://fairshare-tracker.up.railway.app/",
+]
+CSRF_COOKIE_SECURE = True
 # Application definition
 
 INSTALLED_APPS = [

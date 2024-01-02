@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-_jz^l$v)#y&190bo*2$*3*iq2$9o-xs%p&l)n*ec(!4n**-y4k"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     # "*",
@@ -35,10 +35,10 @@ ALLOWED_HOSTS = [
     "fairshare-tracker.up.railway.app",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://fairshare-tracker.up.railway.app/",
-    "http://fairshare-tracker.up.railway.app/",
+    "https://fairshare-tracker.up.railway.app",
+    "http://fairshare-tracker.up.railway.app",
 ]
-CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -169,7 +169,6 @@ AUTH_USER_MODEL = "users.CustomUser"
 
 CORS_ALLOWED_ORIGINS = [
     "https://fairshare-tracker.up.railway.app/",
-    "http://fairshare-tracker.up.railway.app/",
     # "https://example.com",
     # "https://sub.example.com",
     # "http://localhost:8080",
